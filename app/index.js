@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import switchPage from '../components/switchPage';
+import SwitchPageTwo from '../components/SwitchPageTwo';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <switchPage linkPath='/otherPage' btnTitle='Change Image'/>
+      <SwitchPageTwo linkPath='/otherPage' btnTitle='Change Image'/>
       <Text>I love randomness</Text>
       <StatusBar style="auto" />
     </View>
@@ -15,7 +15,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'colorScheme.lightMain',
     alignItems: 'center',
     justifyContent: 'center',
   },

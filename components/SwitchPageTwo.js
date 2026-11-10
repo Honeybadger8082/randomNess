@@ -1,13 +1,13 @@
 import { Link } from 'expo-router';
-import { StyleSheet, Text, Pressable } from 'react-native';
+import { StyleSheet, Text, Pressable, TouchableOpacity } from 'react-native';
 
 
 export default function SwitchPage({btnTitle, linkPath}) {
   return (
       <Link href={linkPath} asChild>
-        <Pressable style={styles.btn}>
+        <TouchableOpacity style={styles.btn}>
           <Text style={styles.btnText}>{btnTitle}</Text>
-        </Pressable>
+        </TouchableOpacity>
       </Link>
   );
 }
@@ -15,7 +15,7 @@ export default function SwitchPage({btnTitle, linkPath}) {
 
 const styles = StyleSheet.create({
   btn: {
-    backgroundColor: '' ,
+    backgroundColor: 'colorScheme.main' ,
     justifyContent: 'center',
     alignItems: 'center',
     paddingVertical: 12,
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   btnText: {
-    color: '',
+    color: 'colorScheme.lightText.text',
     fontSize: 16,
     fontWeight: '600',
     textAlign: 'center',
