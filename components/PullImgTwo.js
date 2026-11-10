@@ -5,4 +5,4 @@ const PullImg = (props) =>{
     let curImg = props.img;
 }
 
-export default GameCard;
+export default PullImg;
