@@ -2,7 +2,7 @@ import { Link } from 'expo-router';
 import { StyleSheet, Text, Pressable } from 'react-native';
 
 
-export default function switchPage({btnTitle, linkPath}) {
+export default function SwitchPage({btnTitle, linkPath}) {
   return (
       <Link href={linkPath} asChild>
         <Pressable style={styles.btn}>
