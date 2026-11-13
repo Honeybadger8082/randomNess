@@ -6,7 +6,7 @@ import MainImg from '../components/MainImg';
 export default function App() {
   return (
     <View style={styles.container}>
-      <SwitchPage linkPath='/otherPage' btnTitle='Change Image'/>
+      <SwitchPage linkPath='Other' btnTitle='Change Image'/>
       <Text>I love randomness</Text>
       <StatusBar style="auto" />
       <MainImg img={'https://card-images.archidekt.com/art/front/8/6/86f54b82-0168-421e-bcde-d13d48b7d9ff.webp'} link={'https://bigrat.monster/'} style={styles.mainImg} />

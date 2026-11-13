@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
+      <SwitchPage linkPath='Home' btnTitle='Go Back'/>
       <Text>I dislike randomness</Text>
       <StatusBar style="auto" />
     </View>

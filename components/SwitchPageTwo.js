@@ -1,14 +1,25 @@
 import { Link } from 'expo-router';
 import { StyleSheet, Text, Pressable, TouchableOpacity } from 'react-native';
+import { createStaticNavigation } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import index from '../app/index';
+import otherPage from '../app/otherPage';
 
 
-export default function SwitchPage({btnTitle, linkPath}) {
+const RootStack = createNativeStackNavigator({
+  initialRouteName: linkPath,
+  screens: {
+    Home: index,
+    Other: otherPage
+  },
+});
+
+const Navigation = createStaticNavigation(RootStack);
+
+export default function SwitchPage({linkPath}) {
   return (
-      <Link href={linkPath} asChild>
-        <TouchableOpacity style={styles.btn}>
-          <Text style={styles.btnText}>{btnTitle}</Text>
-        </TouchableOpacity>
-      </Link>
+      initialRouteName = linkPath,
+      <Navigation />
   );
 }
 
