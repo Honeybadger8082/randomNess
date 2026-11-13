@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Image, Pressable } from 'react-native';
+import { Text, View, StyleSheet, Image, Pressable, TouchableOpacity } from 'react-native';
 
 const GameCard = ({ item }) => {
   return (
@@ -6,13 +6,8 @@ const GameCard = ({ item }) => {
       style={styles.card}
       onPress={() => alert(`Launching ${item.title}...`)}>
       <Text style={styles.title}>{item.title}</Text>
-      <Image source={{ uri: item.thumbnail }} style={styles.image} />
+      <Image  style={styles.image} />
       <View style={styles.descBox}>
-        <Text style={styles.type}>[{item.genre} / {item.platform}]</Text>
-        <Text style={styles.desc} numberOfLines={3}>
-          {item.short_description}
-        </Text>
-        <Text style={styles.type}>{item.developer}</Text>
       </View>
     </Pressable>
   );
@@ -21,13 +16,11 @@ const GameCard = ({ item }) => {
 const styles = StyleSheet.create({
   card: {
     width: 260,
-    aspectRatio: 59 / 86,
     alignSelf: 'center',
     marginBottom: 12,
     padding: 8,
     backgroundColor: '#D2AE4F',
     borderWidth: 4,
-    borderColor: '#000',
   },
   title: {
     backgroundColor: '#F4EAD0',
